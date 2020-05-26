@@ -1,13 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
+
 import './App.css';
 
-import HomePage from './homepage'
+import HomePage from './pages/homepage/homepage'
+import ShopPage from './pages/shop/shop'
 
 function App() {
   return (
     <div>
-      <HomePage/>
+      <BrowserRouter>
+      <Switch>
+        <Route exact path='/' component={HomePage}/>
+        <Route exact path='/shop' component={ShopPage}/>
+      </Switch>
+      </BrowserRouter>
     </div>
   );
 }
