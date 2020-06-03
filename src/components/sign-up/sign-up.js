@@ -41,7 +41,7 @@ class SignUp extends React.Component {
       })
 
     } catch (e) {
-      console.log(e)
+      alert('Something is wrong, please check your values and try again')
     }
 
     this.setState({email: '', password: ''})
